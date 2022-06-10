@@ -23,7 +23,7 @@ const App = () => {
                 type='button'
                 className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white'
                 style={{
-                  background: 'red',
+                  background: 'blue',
                   borderRadius: '50%',
                 }}
               >
