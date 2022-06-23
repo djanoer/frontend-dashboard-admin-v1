@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
-}
+const Footer = () => (
+  <div>
+    <p>
+    © 2022 All rights reserved by Soppinx.com
+    </p>
+  </div>
+);
 
-export default Footer
+export default Footer;

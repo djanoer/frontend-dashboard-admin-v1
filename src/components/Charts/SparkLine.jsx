@@ -19,7 +19,7 @@ class SparkLine extends React.PureComponent {
           format: '${x} : data ${yval}',
           trackLineSettings: {
             visible: true
-          }
+          },
         }}
         markerSettings={{ visible: ['All'], size: 2.5, fill: currentColor }}
         dataSource={data}
