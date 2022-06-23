@@ -1,5 +1,5 @@
 import React from 'react';
-// import { BsCurrencyDollar } from 'react-icons/bs';
+import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
 import { IoIosMore } from 'react-icons/io';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
@@ -24,10 +24,9 @@ const DropDown = ({ currentMode }) => (
 );
 
 const Ecommerce = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor, currentMode } = useStateContext();
 
   return (
-    // <div className="mt-12">
     <div className="mt-24">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
@@ -41,7 +40,7 @@ const Ecommerce = () => {
               style={{ backgroundColor: currentColor }}
               className="text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full p-4"
             >
-              {/* <BsCurrencyDollar /> */}
+              <BsCurrencyDollar />
             </button>
           </div>
           <div className="mt-6">
@@ -139,7 +138,7 @@ const Ecommerce = () => {
             </div>
             <div>
               <Stacked
-              // currentMode={currentMode}
+              currentMode={currentMode}
               width="320px"
               height="360px"
               />
@@ -163,8 +162,8 @@ const Ecommerce = () => {
 
             <div className="mt-4">
               <SparkLine
-                // currentColor={currentColor}
-                // id="column-sparkLine"
+                currentColor={currentColor}
+                id="column-sparkLine"
                 height="100px"
                 type="Column"
                 data={SparklineAreaData}
@@ -196,9 +195,7 @@ const Ecommerce = () => {
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
           <div className="flex justify-between items-center gap-2">
             <p className="text-xl font-semibold">Recent Transactions</p>
-            <DropDown
-              // currentMode={currenMode}
-            />
+            <DropDown currentMode={currentMode} />
           </div>
           <div className="mt-10 w-72 md:w-400">
             {recentTransactions.map((item) => (
@@ -230,8 +227,7 @@ const Ecommerce = () => {
             <div className="mt-3">
               <Button
                 color="white"
-                // bgColor={currentColor}
-                bgColor="red"
+                bgColor={currentColor}
                 text="Add"
                 borderRadius="10px"
               />
@@ -243,9 +239,7 @@ const Ecommerce = () => {
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-xl w-96 md:w-760">
           <div className="flex justify-between items-center gap-2 mb-10">
             <p className="text-xl font-semibold">Sales Overview</p>
-            <DropDown
-              // currentMode={currentMode}
-            />
+            <DropDown currentMode={currentMode} />
           </div>
           <div className="md:w-full overflow-auto">
             <LineChart />
