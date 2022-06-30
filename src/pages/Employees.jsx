@@ -17,8 +17,8 @@ const Employees = () => {
         width="auto"
         allowPaging
         allowSorting
-        // pageSettings={{ pageCount: 5 }}
-        // editSettings={editing}
+        pageSettings={{ pageCount: 5 }}
+        editSettings={editing}
         toolbar={['Search']}
       >
         <ColumnsDirective>
