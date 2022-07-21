@@ -102,7 +102,7 @@ const Navbar = () => {
         {isClicked.cart && (<Cart />)}
         {isClicked.chat && (<Chat />)}
         {isClicked.notification && (<Notification />)}
-        {isClicked.useProfile && (<UserProfile />)}
+        {isClicked.userProfile && (<UserProfile />)}
       </div>
     </div>
   )

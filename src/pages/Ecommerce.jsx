@@ -13,7 +13,7 @@ const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
     <DropDownListComponent
       id="time"
-      fields={{ text: 'Time', value: 'Id'}}
+      fields={{ text: 'Time', value: 'Id' }}
       style={{ border: 'none', color: 'red' }}
       value="1"
       dataSource={dropdownData}
@@ -33,7 +33,7 @@ const Ecommerce = () => {
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400" >Earnings</p>
-              <p className="text-2xl" >Rp.107,456,089</p>
+              <p className="text-2xl" >$107,45</p>
             </div>
             <button
               type="button"
@@ -44,7 +44,7 @@ const Ecommerce = () => {
             </button>
           </div>
           <div className="mt-6">
-            <Button 
+            <Button
               color="white"
               bgColor={currentColor}
               text="Download"
@@ -56,8 +56,8 @@ const Ecommerce = () => {
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
           {earningData.map((item) => (
             <div
-            key={item.title}
-            className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl">
+              key={item.title}
+              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl">
               <button
                 type="button"
                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}
@@ -104,51 +104,51 @@ const Ecommerce = () => {
             <div className="border-r-1 border-color m-4 pr-10">
               <div>
                 <p>
-                  <span className="text-3xl font-semibold">Rp.56,896,090</span>
+                  <span className="text-3xl font-semibold">$56,89</span>
                   <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">21%</span>
                 </p>
                 <p className="text-gray-500 mt-1">Budget</p>
               </div>
               <div className="mt-8">
                 <p>
-                  <span  pan className="text-3xl font-semibold">Rp.31,485,879</span>
+                  <span pan className="text-3xl font-semibold">$31,48</span>
                 </p>
                 <p className="text-gray-500 mt-1">Expense</p>
               </div>
 
               <div className="mt-5">
                 <SparkLine
-                currentColor={currentColor}
-                id="line-sparkline"
-                type="Line"
-                height="80px"
-                width="250px"
-                data={SparklineAreaData}
-                color={currentColor}
+                  currentColor={currentColor}
+                  id="line-sparkline"
+                  type="Line"
+                  height="80px"
+                  width="250px"
+                  data={SparklineAreaData}
+                  color={currentColor}
                 />
               </div>
               <div className="mt-10">
                 <Button
-                color="white"
-                bgColor={currentColor}
-                text="Download Report"
-                borderRadius="10px"
+                  color="white"
+                  bgColor={currentColor}
+                  text="Download Report"
+                  borderRadius="10px"
                 />
               </div>
             </div>
             <div>
               <Stacked
-              currentMode={currentMode}
-              width="320px"
-              height="360px"
+                currentMode={currentMode}
+                width="320px"
+                height="360px"
               />
             </div>
           </div>
         </div>
         <div>
-          <div 
-          className="rounded-2xl md:w-400 p-4 m-3"
-          style={{ backgroundColor: "blue" }}
+          <div
+            className="rounded-2xl md:w-400 p-4 m-3"
+            style={{ backgroundColor: "blue" }}
           // style={{ backgroundColor: currentColor }}
           >
             <div className="flex justify-between items-center">
@@ -172,7 +172,7 @@ const Ecommerce = () => {
               />
             </div>
           </div>
-          
+
           <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
             <div>
               <p className="text-2xl font-semibold">$41,112</p>
@@ -203,24 +203,24 @@ const Ecommerce = () => {
                 key={item.title}
                 className="flex justify-between mt-4"
               >
-              <div className="flex gap-4">
-                <button
-                  type="button"
-                  style={{
-                    color: item.iconColor,
-                    backgroundColor: item.iconBg,
-                  }}
-                  className="text-2xl rounded-lg p-4 hover:drop-shadow-xl"
-                >
-                  {item.icon}
-                </button>
-                <div>
-                  <p className="text-md font-semibold">{item.title}</p>
-                  <p className="text-sm text-gray-400">{item.desc}</p>
+                <div className="flex gap-4">
+                  <button
+                    type="button"
+                    style={{
+                      color: item.iconColor,
+                      backgroundColor: item.iconBg,
+                    }}
+                    className="text-2xl rounded-lg p-4 hover:drop-shadow-xl"
+                  >
+                    {item.icon}
+                  </button>
+                  <div>
+                    <p className="text-md font-semibold">{item.title}</p>
+                    <p className="text-sm text-gray-400">{item.desc}</p>
+                  </div>
                 </div>
+                <p className={`text-${item.pcColor}`}>{item.amount}</p>
               </div>
-              <p className={`text-${item.pcColor}`}>{item.amount}</p>
-            </div>
             ))}
           </div>
           <div className="flex justify-between items-center mt-5 border-t-1 border-color">
@@ -365,12 +365,12 @@ const Ecommerce = () => {
               type="button"
               className="text-xl font-semibold text-gray-500"
             >
-              <IoIosMore/>
+              <IoIosMore />
             </button>
           </div>
           <div className="mt-10">
             <img
-              className="md:w-96 h-50" 
+              className="md:w-96 h-50"
               src={product9}
               alt=""
             />
